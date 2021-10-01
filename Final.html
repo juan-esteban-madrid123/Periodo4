@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trabajo final</title>
+	<link rel="stylesheet" type="text/css" href="estifinal.css">
+</head>
+<body onkeypress="teclado()">
+
+<form>
+<div class="titu" id="most">Clases Moon Ligth</div>
+<div class="titu" id="most">Clases Moon Light</div>
+<div class="cu"  id="c"></div>
+<div class="cu1" id="c1"></div>
+<div class="cu2" id="c2"></div>
+<div class="pre1" id="most2">¿Señor usuario Quiere aprender a sumar y a multiplicar?</div>
+<div class="pre2" id="most3">¿Señor usuario Quiere aprender a restar y dividir?</div>
+<div class="p1" id="tema1" onclick="inf2()">SR</div>
+<div class="boto" id="bota">Leer más oprima A</div>
+<div class="cuadro" id="cua1">Buenas tardes señor el dia de hoy le enseñaremos a sumar y le estaremos dejando una especie de calculadora para que digite sus operaciones</div>
+<div class="p2" id="tema2" onclick="inf3()">MD</div>
+<div class="bot" id="bat">Leer más oprima D</div>
+<div class="cuadro1" id="cua2">Buenas tardes señor el dia de hoy le enseñaremos a restar y le estaremos dejando una especie de calculadora para que digite sus operaciones</div>
+<div class="cl" id="cerrar" onclick="cerrar()">X</div>
+<div class="cuateo"></div>
+<div class="teo" id="teoria"><p><i><b>Bienvenido señor ususario</i></b><br><br><i><c>Señor usuario esta es nuestra aplicacion donde se encuentra la informacion sobre nuestro local,donde nos ubicamos,en que nos especializamos,que hacemos y nuestro numero telefonico.<br><br>Nuestro local maneja diversas operaciones como suma,resta,multiplicacion y divisio<br><br>señor usuario le dejaremos unas imagenes donde pueda observar como resolvemos unas operaciones<br><br>SUMA,RESTA,MULTIPLICACION Y DIVISION<br><br>Numero telefonico:+57 300 666 777 000<br><br>Nos especialisamos en llenar su cabeza de conocimiento y que quede llenito</c></i></p></div>
+
+	<label class="chil"><h1>calculadora</h1></label><br>
+	<label class="chi">numero 1:</label><br>
+	<input type="text" id="numero1" placeholder="numero(1)" class="lo"><br><br>
+    <label class="lola">numero 2:</label><br>
+	<input type="text" id="numero2" placeholder="numero(2)" class="la">
+</form>
+
+<div class="suma" onclick="era()" id="´suma1">suma</div>
+<div class="resta" onclick="er()" id="´suma1">resta</div>
+<div class="mul" onclick="e()" id="´suma1">multi</div>
+<div class="divi" onclick="d()" id="´suma1">divi</div>
+<div class="resultado" onclick="era()" id="suma1"></div>
+
+<script>
+    function era(){
+        x=Number(numero1.value);
+        y=Number(numero2.value);
+        suma= x+y;
+        console.log(suma);
+        suma1.innerHTML=suma;
+
+    }
+    function er(){
+        x=Number(numero1.value);
+        y=Number(numero2.value);
+        resta= x-y;
+        console.log(resta);
+        suma1.innerHTML=resta;
+
+    }
+    function e(){
+        x=Number(numero1.value);
+        y=Number(numero2.value);
+        mul= x*y;
+        console.log(mul);
+        suma1.innerHTML=mul;
+
+    }
+    function d(){
+        x=Number(numero1.value);
+        y=Number(numero2.value);
+        divi= x/y;
+        console.log(divi);
+        suma1.innerHTML=divi;
+
+    }
+
+
+
+	function inf2() {
+		most2.style.width=80+"%";
+		most2.style.height=90+"%";
+		tema1.style.opacity=0.5;
+		bota.style.width=10+"%";
+		bota.style.height=10+"%";
+	}
+	function inf3() {
+		most3.style.width=80+"%";
+		most3.style.height=90+"%";
+		tema2.style.opacity=0.5;
+		bat.style.width=10+"%";
+		bat.style.height=10+"%";
+	}
+	function cerrar() {
+		most2.style.width=0+"%";
+		most3.style.width=0+"%";
+		most2.style.height=0+"%";
+		most3.style.height=0+"%";
+		tema1.style.opacity=1;
+		tema2.style.opacity=1;
+		bota.style.width=0+"%";
+		bota.style.height=0+"%";
+		bat.style.width=0+"%";
+		bat.style.height=0+"%";
+		cua1.style.width=0+"%";
+		cua1.style.height=0+"%";
+		cua2.style.width=0+"%";
+		cua2.style.height=0+"%";
+	}
+	function teclado() {
+		console.log(event.type);
+		console.log(event.code);
+		if (event.code=="KeyA") 
+			{
+				cua1.style.width=80+"%";
+				cua1.style.height=90+"%";
+			}
+		if (event.code=="KeyD") 
+			{
+				cua2.style.width=80+"%";
+				cua2.style.height=90+"%";
+			}
+	}
+</script>
+
+
+</body>
+</html>
